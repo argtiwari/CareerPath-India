@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/public/index.html/static/css/main.19ec5990.css",
-    "main.js": "/public/index.html/static/js/main.49b45765.js",
-    "static/js/453.66290eec.chunk.js": "/public/index.html/static/js/453.66290eec.chunk.js",
-    "static/media/hero-bg.jpg": "/public/index.html/static/media/hero-bg.8b6b7c7adc525a3c9d2f.jpg",
-    "static/media/lady-image.png": "/public/index.html/static/media/lady-image.3654920cfdd954641d33.png",
-    "index.html": "/public/index.html/index.html",
-    "main.19ec5990.css.map": "/public/index.html/static/css/main.19ec5990.css.map",
-    "main.49b45765.js.map": "/public/index.html/static/js/main.49b45765.js.map",
-    "453.66290eec.chunk.js.map": "/public/index.html/static/js/453.66290eec.chunk.js.map"
+    "main.css": "/CareerPath-India/static/css/main.3883c23e.css",
+    "main.js": "/CareerPath-India/static/js/main.7d90ec54.js",
+    "static/js/453.66290eec.chunk.js": "/CareerPath-India/static/js/453.66290eec.chunk.js",
+    "static/media/hero-bg.jpg": "/CareerPath-India/static/media/hero-bg.8b6b7c7adc525a3c9d2f.jpg",
+    "static/media/lady-image.png": "/CareerPath-India/static/media/lady-image.3654920cfdd954641d33.png",
+    "index.html": "/CareerPath-India/index.html",
+    "main.3883c23e.css.map": "/CareerPath-India/static/css/main.3883c23e.css.map",
+    "main.7d90ec54.js.map": "/CareerPath-India/static/js/main.7d90ec54.js.map",
+    "453.66290eec.chunk.js.map": "/CareerPath-India/static/js/453.66290eec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19ec5990.css",
-    "static/js/main.49b45765.js"
+    "static/css/main.3883c23e.css",
+    "static/js/main.7d90ec54.js"
   ]
 }
