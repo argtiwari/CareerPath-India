@@ -17,7 +17,7 @@ function Header() {
         <div className="logo">
           <a href="/ ">
             {/* ध्यान दें: \logo192.png की बजाय /logo192.png या सही import path का उपयोग करें */}
-            <img src="/brand-logo.png" alt="CareerPath India" className="logo-image" style={{ width: '150px', height: '60px' }} />
+            <img src={process.env.PUBLIC_URL + "/brand-logo.png"} alt="CareerPath India" className="logo-image" style={{ width: '150px', height: '60px' }} />
           </a>
         </div>
         
