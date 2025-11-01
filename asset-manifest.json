@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/argtiwari/CareerPath-India.git/static/css/main.19ec5990.css",
+    "main.js": "/argtiwari/CareerPath-India.git/static/js/main.e1263677.js",
+    "static/js/453.66290eec.chunk.js": "/argtiwari/CareerPath-India.git/static/js/453.66290eec.chunk.js",
+    "static/media/hero-bg.jpg": "/argtiwari/CareerPath-India.git/static/media/hero-bg.8b6b7c7adc525a3c9d2f.jpg",
+    "static/media/lady-image.png": "/argtiwari/CareerPath-India.git/static/media/lady-image.3654920cfdd954641d33.png",
+    "index.html": "/argtiwari/CareerPath-India.git/index.html",
+    "main.19ec5990.css.map": "/argtiwari/CareerPath-India.git/static/css/main.19ec5990.css.map",
+    "main.e1263677.js.map": "/argtiwari/CareerPath-India.git/static/js/main.e1263677.js.map",
+    "453.66290eec.chunk.js.map": "/argtiwari/CareerPath-India.git/static/js/453.66290eec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19ec5990.css",
+    "static/js/main.e1263677.js"
+  ]
+}
