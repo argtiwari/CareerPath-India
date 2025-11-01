@@ -1,0 +1,124 @@
+.contact-form-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.form-container {
+    display: flex;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form-image-side {
+    flex: 1;
+    background-color: #f0f0f0;
+    background-image: radial-gradient(#ccc 1px, transparent 0);
+    background-size: 20px 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    min-height: 550px;
+}
+
+.executive-image {
+    width: 100%;
+    height: auto;
+    margin: -10px 0px 110px 0px;
+    object-fit: contain;
+    transform: translateY(10px);
+}
+
+.form-content-side {
+    flex: 1.2;
+    background-color: #ffffff;
+    padding: 40px;
+    text-align: center;
+}
+
+.form-subtitle {
+    color: #ff9800;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.form-content-side h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #555;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+}
+
+.full-width-input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #ff9800;
+    color: white;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e68900;
+}
+
+@media (max-width: 800px) {
+    .form-container {
+        flex-direction: column;
+        box-shadow: none;
+    }
+    .form-image-side {
+        display: none;
+    }
+    .form-content-side {
+        padding: 30px 20px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-row input {
+        margin-bottom: 15px;
+    }
+}

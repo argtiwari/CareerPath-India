@@ -1,0 +1,133 @@
+/* src/components/ContactSection.css */
+
+.contact-info-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9f7ff 100%); 
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-info-section .section-title {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #0056b3; 
+}
+
+.contact-info-section .section-subtitle {
+    font-size: 1.2em;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: stretch; 
+}
+
+.info-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.info-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.icon-wrapper {
+    background-color: #e0f2ff;  
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px auto;
+    transition: background-color 0.3s ease;
+}
+
+.info-card:hover .icon-wrapper {
+    background-color: #cce7ff;  
+}
+
+.card-icon {
+    font-size: 2.2em;
+    color: #007bff; 
+}
+
+.info-card h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.info-card .contact-link {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.info-card .contact-link:hover {
+    color: #0056b3;
+}
+
+.info-card .contact-link .fa-icon {  
+    margin-right: 8px;
+}
+
+.info-card .note {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Map Embed Wrapper */
+.map-embed-wrapper {
+    grid-column: 1 / -1;  
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;  
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.map-embed-wrapper iframe {
+    display: block;  
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info-section .section-title {
+        font-size: 2em;
+    }
+    .contact-info-section {
+        padding: 60px 0;
+    }
+    .map-embed-wrapper {
+        min-height: 250px;  
+    }
+}

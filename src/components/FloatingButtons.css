@@ -1,0 +1,80 @@
+/* src/components/FloatingButtons.css */
+
+/* ======================================== */
+/* 🌊 SHAKING ANIMATION (JIGGLE) KEYFRAMES */
+/* ======================================== */
+@keyframes jiggle {
+  0% { transform: scale(1) translateX(0); }
+  25% { transform: scale(1.05) translateX(2px) rotate(1deg); }
+  50% { transform: scale(1.05) translateX(-2px) rotate(-1deg); }
+  75% { transform: scale(1.05) translateX(2px) rotate(1deg); }
+  100% { transform: scale(1) translateX(0); }
+}
+
+.floating-buttons-container {
+    position: fixed;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1050; 
+}
+
+.floating-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px; 
+    height: 48px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* 🖱️ Hover Animation (Jiggle को छोड़कर सभी पर) */
+.floating-btn:hover {
+    transform: scale(1.1) translateX(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 🕺 Shaking Effect लागू करें */
+.shake-animate {
+    animation: jiggle 2s ease infinite; 
+    transform-origin: center;
+}
+
+/* ======================================== */
+/* 🌈 REAL SOCIAL MEDIA COLORS */
+/* ======================================== */
+
+/* 1. Call Button (Orange) */
+.call-btn {
+    background-color: #ff5722; /* Vibrant Orange */
+}
+
+/* 2. WhatsApp Button (Green) */
+.whatsapp-btn {
+    background-color: #25D366; /* Real WhatsApp Green */
+}
+
+/* 3. Facebook Button (Blue) */
+.facebook-btn {
+    background-color: #1877f2; /* Real Facebook Blue */
+}
+
+/* 4. Instagram Button (Pink/Red) */
+.instagram-btn {
+    /* Instagram का मुख्य रंग */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 5. LinkedIn Button (Dark Blue) */
+.linkedin-btn {
+    background-color: #0077b5; 
+}

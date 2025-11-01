@@ -1,0 +1,120 @@
+.streams-section {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.streams-section .section-title {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+.streams-section .section-subtitle {
+    font-size: 1.2em;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.streams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.stream-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.stream-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.stream-icon-wrapper {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.stream-card:hover .stream-icon-wrapper {
+    transform: rotateY(15deg) scale(1.05);
+}
+
+.stream-icon {
+    font-size: 3em;
+    color: #ffffff;
+}
+
+.stream-card h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.stream-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.btn-stream-enquire {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.btn-stream-enquire:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .streams-section {
+        padding: 60px 0;
+    }
+    .streams-section .section-title {
+        font-size: 2em;
+    }
+    .stream-card {
+        padding: 25px;
+    }
+    .stream-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    .stream-icon {
+        font-size: 2.2em;
+    }
+    .stream-card h3 {
+        font-size: 1.4em;
+    }
+}
