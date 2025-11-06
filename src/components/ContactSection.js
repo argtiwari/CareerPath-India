@@ -20,8 +20,8 @@ function ContactSection() {
                         </div>
                         <h3>Branch Office (Pune)</h3>
                         <p>Bramhacorp Vantage Tower C, Opp. Bavdhan Police Station, Ran Nagar, Pune - 4110021</p>
-                        <a href="tel:+919730858444" className="contact-link">
-                           <FontAwesomeIcon icon={faPhone} /> +91 9730858444
+                        <a href="tel:+917988770575" className="contact-link">
+                           <FontAwesomeIcon icon={faPhone} /> +91 7988770575
                         </a>
                     </div>
 

@@ -43,7 +43,7 @@ function Header() {
             {/* Mobile View में CTA Button भी Menu के अंदर */}
             <li className="mobile-cta-li">
               <a 
-                href="https://wa.me/9730858444" 
+                href="https://wa.me/917988770575" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-whatsapp"
@@ -58,7 +58,7 @@ function Header() {
         {/* Desktop CTA Button (मोबाइल में छिप जाएगा) */}
         <div className="cta-button desktop-cta">
           <a 
-            href="https://wa.me/9730858444" 
+            href="https://wa.me/917988770575" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-whatsapp"

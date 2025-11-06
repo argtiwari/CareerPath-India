@@ -1,50 +1,209 @@
-.hero-section {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 150px 0;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* HeroSection.css - Fully Mobile-Friendly & Unique Design */
+
+/* --- 1. Main Container & Background --- */
+
+.codewave-hero-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Chote devices par poori screen cover kare */
+    display: flex;
+    align-items: center;
+    overflow: hidden; 
+    background-color: #0b0c10; /* Dark, techy background */
+    color: #c5c6c7; /* Light text color */
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    padding: 20px 0; 
 }
 
-.hero-section::before {
-    content: '';
+/* Animated Gradient Background */
+.gradient-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* Attractive Gradient Colors */
+    background: linear-gradient(-45deg, #1f2833, #0b0c10, #45a29e, #1f2833);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite; /* Smooth animation */
+    opacity: 0.3; /* Subtle effect */
     z-index: 1;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.hero-content h1 {
-  font-size: 3.5em;
-  margin-bottom: 20px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+/* --- 2. Content Layout --- */
+
+.codewave-content-wrapper {
+    position: relative;
+    z-index: 10; /* Content ko background ke upar rakhega */
+    width: 95%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-between;
 }
 
-.hero-content p {
-  font-size: 1.3em;
-  margin-bottom: 40px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+/* --- 3. Text Content (Left Side) --- */
+
+.codewave-text-content {
+    flex: 1 1 100%; /* Mobile par full width lega */
+    padding: 0 10px;
+    text-align: center; /* Mobile par text center align kiya */
+    margin-bottom: 50px;
+    animation: slideInLeft 1s ease-out;
 }
 
-.hero-buttons .btn {
-  font-size: 1.1em;
-  padding: 12px 25px;
-  margin: 10px;
+.codewave-title {
+    font-size: 3rem; /* Mobile ke liye chota kiya */
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #ffffff; /* White for main title */
+}
+
+.code-highlight {
+    /* Main highlight color - Bright Cyan */
+    color: #66fcf1; 
+}
+
+.codewave-subtitle {
+    font-size: 1.1rem; /* Mobile ke liye chota kiya */
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #c5c6c7;
+}
+
+/* --- 4. Call-to-Action Button --- */
+
+.codewave-cta-button {
+    background: linear-gradient(90deg, #45a29e, #66fcf1); /* Eye-catching gradient button */
+    border: none;
+    padding: 12px 25px; /* Padding kam kiya */
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #0b0c10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 252, 241, 0.4);
+}
+
+.codewave-cta-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(102, 252, 241, 0.6);
+}
+
+/* --- 5. Visual Side (Right Side) --- */
+
+.codewave-visual-side {
+    flex: 1 1 100%; /* Mobile par full width lega */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px; /* Neeche se spacing */
+    animation: slideInRight 1s ease-out;
+}
+
+.codewave-terminal-mockup {
+    background-color: #1f2833;
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%; /* Mobile width adjust kiya */
+    max-width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #45a29e;
+    font-family: 'Consolas', monospace; /* Monospace font for code look */
+    font-size: 0.9rem; /* Chota font size */
+    color: #66fcf1; /* Code text color */
+}
+
+.codewave-terminal-mockup p {
+    margin: 6px 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.line-1 { animation: typing 2s steps(30, end) 0.5s forwards; width: 0; }
+.line-2 { animation: typing 2s steps(30, end) 3s forwards; width: 0; }
+.line-3 { animation: typing 2s steps(30, end) 5.5s forwards; width: 0; }
+
+.cursor {
+    display: inline-block;
+    vertical-align: top;
+    animation: blink 0.7s infinite;
+}
+
+/* --- 6. Keyframes (Animations) --- */
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* --- 7. Desktop/Larger Screen Adjustments (Min-width: 900px) --- */
+
+@media (min-width: 900px) {
+    .codewave-hero-container {
+        min-height: 80vh;
+    }
+    
+    .codewave-content-wrapper {
+        flex-direction: row; /* Desktop par side-by-side */
+        text-align: left; /* Text left align */
+    }
+
+    .codewave-text-content {
+        flex: 1 1 500px;
+        padding-right: 40px;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    
+    .codewave-title {
+        font-size: 4.5rem; /* Desktop font size wapas bada kiya */
+        margin-bottom: 20px;
+    }
+    
+    .codewave-subtitle {
+        font-size: 1.4rem;
+        margin-bottom: 40px;
+    }
+    
+    .codewave-cta-button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+    }
+
+    .codewave-visual-side {
+        flex: 1 1 400px;
+    }
+    
+    .codewave-terminal-mockup {
+        width: 400px;
+        font-size: 0.8rem;
+        padding: 25px;
+    }
 }

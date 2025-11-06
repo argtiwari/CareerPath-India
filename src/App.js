@@ -14,7 +14,6 @@ import FloatingButtons from './components/FloatingButtons';
 import StreamsSection from './components/StreamsSection';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import ContactSection from './components/ContactSection';
-
 import './App.css'; 
 
 
@@ -30,8 +29,8 @@ function App() {
     <div className="App">
       <Header />
       <HeroSection />
-      <StreamsSection />
       <ServicesSection />
+      <StreamsSection />
       <WhyChooseUs />
       <Testimonials />
       <ContactSection />
@@ -39,6 +38,7 @@ function App() {
       <FloatingButtons />
       <ScrollToTopButton /> 
       <Footer />
+      
     </div>
   );
 }

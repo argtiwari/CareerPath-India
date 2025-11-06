@@ -32,12 +32,12 @@ function FloatingButtons() {
     return (
         <div className="floating-buttons-container">
             {/* 1. Call Button (Shaking) */}
-            <a href="tel:+919730858444" className="floating-btn call-btn shake-animate" title="Call Us">
+            <a href="tel:+917988770575" className="floating-btn call-btn shake-animate" title="Call Us">
                 <FontAwesomeIcon icon={faPhone} />
             </a>
 
             {/* 2. WhatsApp Button (Shaking) */}
-            <a href="https://wa.me/9730858444" target="_blank" rel="noopener noreferrer" className="floating-btn whatsapp-btn shake-animate" title="WhatsApp Chat">
+            <a href="https://wa.me/917988770575" target="_blank" rel="noopener noreferrer" className="floating-btn whatsapp-btn shake-animate" title="WhatsApp Chat">
                 <FontAwesomeIcon icon={faWhatsapp} />
             </a>
 

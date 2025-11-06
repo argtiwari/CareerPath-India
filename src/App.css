@@ -76,3 +76,51 @@ img {
     height: auto;
     display: block; 
 }
+
+
+/* src/index.css ya src/App.css */
+html {
+    box-sizing: border-box;
+    /* ensure koi horizontal scroll na ho */
+    overflow-x: hidden; 
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    /* ensure koi horizontal scroll na ho */
+    /* overflow-x: hidden;  */
+}
+
+/* Container ko sahi tareeke se use karein */
+.container {
+    max-width: 1200px; /* Ya jo bhi aapki max desktop width hai */
+    margin: 0 auto;
+    padding: 0 20px; /* Side padding dena zaroori hai */
+    width: 100%; /* Ensure karta hai ki container pura width le */
+}
+
+/* Body par overflow-x hidden set karna */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Aapka preferred font */
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Images ko block level element banayein */
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -64,7 +64,7 @@ function StreamsSection() {
                             </div>
                             <h3>{stream.title}</h3>
                             <p>{stream.description}</p>
-                            <a href="#schedule-call" className="btn btn-stream-enquire">Enquire Now</a>
+                            <a href="#contact" className="btn btn-stream-enquire">Enquire Now</a>
                         </div>
                     ))}
                 </div>

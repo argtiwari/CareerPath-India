@@ -18,6 +18,14 @@
     transform: translateY(-50%);
     z-index: 1050; 
 }
+@media (max-width: 480px) {
+    .floating-buttons-container {
+        right: 10px; 
+        top: 60%;   
+    transform: translateY(-50%);
+    z-index: 0;
+    }
+}
 
 .floating-btn {
     display: flex;
