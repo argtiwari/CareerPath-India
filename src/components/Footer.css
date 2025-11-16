@@ -1,67 +1,161 @@
 /* src/components/Footer.css */
-.footer-section {
-  background-color: #333;
-  color: #f8f9fa;
-  padding: 60px 0 30px 0;
-  font-size: 0.9em;
+
+.main-footer {
+    position: relative;
+    /* Deep Blue Gradient Background */
+    background: linear-gradient(135deg, #1a2a6b 0%, #003366 100%); 
+    color: #f0f0f0; /* Light text color */
+    padding: 60px 0 30px 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  text-align: left;
-  margin-bottom: 40px;
+/* 🚨 Section Joining Effect (New Way) - Wave/Curve Effect */
+.footer-wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Curve ki height */
+    background-color: #335382; /* Puraane section ka background color */
+    
+    /* Using clip-path for a smooth curve effect */
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 80%); 
+    /* Polygon points ko adjust karke alag-alag shapes bana sakte hain */
+
+    /* Agar aapko smooth circle wala curve chahiye, toh iska use karein: */
+    /* clip-path: ellipse(150% 100% at 50% 100%); */
+    
+    /* Z-index set karna zaroori hai agar footer ka BG aur iska BG match nahi kar raha */
+    z-index: -1; 
+}
+
+/* Footer Grid Layout */
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr; /* Columns width */
+    gap: 30px;
+    padding-top: 40px; /* Wave ke neeche se content shuru ho */
 }
 
 .footer-col h3 {
-  color: #007bff; /* ब्लू हेडिंग */
-  margin-bottom: 20px;
-  font-size: 1.3em;
+    color: #6dd5ed; /* Highlight color: Cyan/Light Blue */
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-col p {
-  margin-bottom: 10px;
-  line-height: 1.8;
+    font-size: 0.95em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
+/* Quick Links Styling */
 .footer-col ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-col ul li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
-.footer-col ul li a,
-.footer-col .social-links a {
-  color: #f8f9fa;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.footer-col ul li a {
+    color: #f0f0f0;
+    transition: color 0.3s ease;
 }
 
-.footer-col ul li a:hover,
-.footer-col .social-links a:hover {
-  color: #007bff;
+.footer-col ul li a:hover {
+    color: #6dd5ed; /* Highlight on hover */
+    padding-left: 5px; /* Subtle hover animation */
 }
 
-.footer-bottom {
-  border-top: 1px solid #444;
-  padding-top: 20px;
-  text-align: center;
+/* Contact Icons Styling */
+.contact-icon {
+    color: #6dd5ed;
+    margin-right: 10px;
+    width: 15px; /* Ensure icon size is consistent */
 }
 
-.footer-bottom p {
-  margin: 0;
-  font-size: 0.8em;
+/* Social Media Icons Styling */
+.social-links-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-.footer-bottom a {
-    color: #007bff;
-    text-decoration: none;
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.footer-bottom a:hover {
-    text-decoration: underline;
+/* 🚨 Stylish Hover Animation (Scale & Shadow) */
+.social-icon:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Social Icon Colors */
+.whatsapp-bg { background-color: #25D366; }
+.facebook-bg { background-color: #1877F2; }
+.instagram-bg { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 60%, #d6249f 90%); }
+.linkedin-bg { background-color: #0077b5; }
+
+.developer-tag {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
+}
+
+.copyright-text {
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* 📱 Mobile Responsive Layout */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr); /* Tablet layout */
+        padding: 40px 20px;
+    }
+    .footer-about {
+        order: 1;
+    }
+    .footer-social {
+        order: 4;
+    }
+    .developer-tag {
+        display: none; /* Mobile par developer tag chhipa sakte hain */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* Mobile layout (single column) */
+        text-align: center;
+    }
+    .footer-col h3 {
+        margin-top: 15px;
+    }
+    .footer-about, .footer-social, .footer-col {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .social-links-container {
+        justify-content: center; /* Center icons on mobile */
+    }
+    .footer-wave-top {
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 90%); /* Curve thoda kam visible hoga */
+    }
 }
