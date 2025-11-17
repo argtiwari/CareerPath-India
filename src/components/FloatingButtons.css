@@ -37,7 +37,7 @@
     margin-bottom: 10px;
     color: white;
     font-size: 1.2em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 230, 118, 0.6);
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
@@ -47,7 +47,7 @@
 /* 🖱️ Hover Animation (Jiggle को छोड़कर सभी पर) */
 .floating-btn:hover {
     transform: scale(1.1) translateX(-5px); 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 15px rgba(230, 39, 5, 0.6);
 }
 
 /* 🕺 Shaking Effect लागू करें */

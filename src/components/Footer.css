@@ -3,31 +3,15 @@
 .main-footer {
     position: relative;
     /* Deep Blue Gradient Background */
-    background: linear-gradient(135deg, #1a2a6b 0%, #003366 100%); 
-    color: #f0f0f0; /* Light text color */
+    background: #1a1a2e;
+    color: #00E676; /* Light text color */
     padding: 60px 0 30px 0;
     font-family: 'Roboto', sans-serif;
+    box-shadow: #f0f0f0 0px -5px 15px -5px;
 }
 
 /* 🚨 Section Joining Effect (New Way) - Wave/Curve Effect */
-.footer-wave-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px; /* Curve ki height */
-    background-color: #335382; /* Puraane section ka background color */
-    
-    /* Using clip-path for a smooth curve effect */
-    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 80%); 
-    /* Polygon points ko adjust karke alag-alag shapes bana sakte hain */
 
-    /* Agar aapko smooth circle wala curve chahiye, toh iska use karein: */
-    /* clip-path: ellipse(150% 100% at 50% 100%); */
-    
-    /* Z-index set karna zaroori hai agar footer ka BG aur iska BG match nahi kar raha */
-    z-index: -1; 
-}
 
 /* Footer Grid Layout */
 .footer-content {
@@ -38,7 +22,7 @@
 }
 
 .footer-col h3 {
-    color: #6dd5ed; /* Highlight color: Cyan/Light Blue */
+    color: #00E676; /* Highlight color: Cyan/Light Blue */
     font-size: 1.4em;
     font-weight: 700;
     margin-bottom: 25px;

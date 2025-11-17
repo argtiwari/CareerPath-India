@@ -1,157 +1,455 @@
+/* src/components/Header.css */
+
 .navbar {
-  background-color: #ededed;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    position: fixed;
+    /* Sticky se better hai, top: 0 par hamesha fixed rahega */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* 🚨 Navbar Background: Dark Blue-Violet Gradient */
+    background: linear-gradient(90deg, #1A1A2E 0%, #172D40 100%);
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    /* Thoda shadow */
+    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Scroll hone par thoda change */
+.navbar.scrolled {
+    padding: 10px 0;
+    /* Thoda chhota ho jaye */
+    background-color: rgba(26, 26, 46, 0.95);
+    /* Thoda solid dark */
 }
 
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    /* Same as global container */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo Styling */
 .logo a {
-  font-size: 26px;
-  font-weight: 700;
-  color: #007bff;
-  text-decoration: none;
+    color: #00E676;
+    /* 🚨 Light Teal color for Logo (as per image) */
+    font-size: 1.6em;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    /* For aligning logo image/text */
+    align-items: center;
 }
 
+/* Agar image logo hai */
+.logo-img {
+    height: 40px;
+    /* Adjust height */
+    margin-right: 10px;
+}
+
+/* Navigation Links */
 .nav-links ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
-  margin-left: 30px;
-  position: relative;
+    margin: 0 15px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #555;
-  font-weight: 500;
-  padding: 5px 0;
-  display: block;
-  transition: color 0.3s ease;
+nav-links li a,
+.nav-links li span {
+    /* 🚨 'span' ki styling ab 'Link' par bhi apply hogi */
+    position: relative;
+    color: #f0f0f0;
+    font-weight: 500;
+    padding: 5px 0;
+    cursor: pointer;
+    display: block;
+    /* Important for padding and underline */
+    text-decoration: none;
+    /* Link ka default underline hatao */
+    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-.nav-links a:hover {
-  color: #007bff;
+.nav-links li a:hover,
+.nav-links li span:hover,
+.nav-links li a.active,
+.nav-links li span.active {
+    color: #00E676;
 }
 
-.mobile-cta-li {
-    display: none; 
+/* 🚨 Active Link Underline Effect */
+.nav-links li a::after,
+.nav-links li span::after {
+    /* 🚨 Span ke saath a par bhi after use hoga */
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #00E676;
+    transition: width 0.3s ease;
 }
+
+.nav-links li a.active::after,
+.nav-links li span.active::after {
+    width: 100%;
+}
+
+
+
+
+/* WhatsApp Button */
+.btn-whatsapp {
+    background: linear-gradient(90deg, #28a745 0%, #00E676 100%);
+    /* Green Gradient */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 230, 118, 0.4);
+    /* Green shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    /* Slight lift effect */
+    box-shadow: 0 8px 20px rgba(0, 230, 118, 0.6);
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Mobile par nav links chhipayenge */
+        /* Hamburger menu se show karenge */
+    }
+
+    .nav-cta {
+        margin-left: auto;
+        /* Button right mein rahega */
+    }
+
+    .logo a {
+        font-size: 1.4em;
+    }
+
+    /* ... (Hamburger menu styles yahan add kar sakte hain) ... */
+}
+
+@media (max-width: 480px) {
+    .navbar-content {
+        padding: 0 15px;
+    }
+
+    .btn-whatsapp {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* src/components/Header.css */
+
+/* Global Navbar Styles (Same as before) */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(90deg, #1A1A2E 0%, #172D40 100%);
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo Styling */
+.logo a {
+    color: #00E676;
+    font-size: 1.6em;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* -------------------------------------- */
+/* 💻 DESKTOP NAVIGATION & DROPDOWNS */
+/* -------------------------------------- */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    /* Thoda kam space */
+    position: relative;
+    /* Dropdown positioning */
+}
+
+.nav-links li a,
+.nav-links li span {
+    /* Span for dropdown titles */
+    position: relative;
+    color: #f0f0f0;
+    font-weight: 500;
+    padding: 5px 0;
+    cursor: pointer;
+    font-weight: bolder;
+    display: block;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-links li span:hover,
+.nav-links li a:hover,
+.nav-links li a.active,
+.nav-links li span.active {
+    color: #00E676;
+}
+
+/* Active Link Underline */
+.nav-links li a::after,
+.nav-links li span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #00E676;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a.active::after,
+.nav-links li span.active::after {
+    width: 100%;
+}
+
+/* Dropdown Menu Base Style */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    /* Navbar ke theek neeche shuru ho */
+    left: -20px;
+    /* Thoda left mein adjust karein */
+    background-color: #213045;
+    /* Dropdown background */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border-top: 3px solid #00E676;
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+    min-width: 250px;
+    z-index: 990;
+
+    /* 🚨 Dropdown Animation (Fade-in/Scale-down) */
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Dropdown visibility (Done through React state, but CSS handles the animation) */
+.has-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* 🚨 MEGA MENU (Courses) */
+.courses-mega-menu {
+    min-width: 600px;
+    left: -150px;
+    /* Center the mega menu under the course link */
+}
+
+.dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 Columns */
+    gap: 20px;
+}
+
+.stream-column h4 {
+    color: #00E676;
+    font-size: 1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.stream-column ul {
+    display: block;
+    /* Remove flex, make it list */
+}
+
+.stream-column ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    font-size: 0.9em;
+    padding: 5px 0;
+}
+
+.stream-column ul li a:hover {
+    color: #6dd5ed;
+}
+
+/* -------------------------------------- */
+/* 📱 MOBILE RESPONSIVENESS & HAMBURGER */
+/* -------------------------------------- */
 
 .hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1100;
-  transition: transform 0.3s ease;
+    display: none;
+    /* Hide on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 115px;
+    z-index: 1010;
 }
 
-.hamburger:hover {
-    transform: scale(1.1);
+.bar1,
+.bar2,
+.bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: #f0f0f0;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 2px;
 }
 
-.bar1, .bar2, .bar3 {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 5px 0;
-  transition: 0.4s;
-  border-radius: 2px;
-}
-
+/* 🚨 Hamburger to X Animation */
 .hamburger.open .bar1 {
-  transform: translate(0, 8px) rotate(-45deg);
+    transform: translate(0, 9px) rotate(-45deg);
 }
 
-.hamburger.open .bar2 {opacity: 0;}
+.hamburger.open .bar2 {
+    opacity: 0;
+}
 
 .hamburger.open .bar3 {
-  transform: translate(0, -8px) rotate(45deg);
+    transform: translate(0, -9px) rotate(45deg);
 }
 
-@media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center; 
+
+@media (max-width: 992px) {
+    .nav-links {
+        /* Desktop links chhipa dein */
+        display: none;
     }
 
     .hamburger {
-        display: block; 
+        display: block;
+        /* Mobile par dikhayein */
     }
 
-    .nav-links {
+    /* 🚨 Mobile Dropdown Menu (Fullscreen/Sidebar) */
+    .nav-links.mobile-show {
         display: block;
-    }
-    .desktop-cta {
-        display: none; 
-    }
-    
-    .nav-links {
-        position: absolute;
-        top: 91px;
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        height: 0; 
-        background-color: #ffffff;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        overflow: hidden; 
-        transition: height 0.4s ease-in-out, padding 0.4s ease-in-out;
-        z-index: 999;
+        height: 100%;
+        background-color: rgba(26, 26, 46, 0.98);
+        /* Fullscreen dark overlay */
+        z-index: 1005;
+        padding-top: 80px;
+        /* Header ke neeche se shuru ho */
+        /* 🚨 Sliding Animation: Left to right */
+        transform: translateX(-100%);
+        animation: slideIn 0.4s forwards;
+        overflow-y: auto;
+        /* Scrollable agar content zyada ho */
     }
 
-    .nav-links.show-menu {
-        height: auto; 
-        max-height: 500px;
-        padding: 20px 0;
+    @keyframes slideIn {
+        100% {
+            transform: translateX(0);
+        }
     }
 
-    .nav-links ul {
+    .nav-links.mobile-show ul {
         flex-direction: column;
-        padding: 0 20px;
+        padding: 0 40px;
     }
 
-    .nav-links li {
-        margin: 0;
-        text-align: left;
-        border-bottom: 1px solid #f0f0f0;
+    .nav-links.mobile-show li {
+        margin: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 10px;
     }
-    
-    .nav-links a {
-        padding: 12px 0;
-        width: 100%;
-        font-weight: 600;
+
+    .nav-links li span,
+    .nav-links li a {
+        font-size: 1.2em;
     }
-    
-    .nav-links a:hover {
-  color: #007bff;
+
+    /* Mobile mein dropdowns ki zaroorat nahi hai, unhein mobile links mein convert karein */
+    .dropdown-menu {
+        display: none !important;
+    }
 }
-    .mobile-cta-li {
-        display: block;
-        margin-top: 20px;
-        padding-top: 10px;
-        border-top: 1px solid #eee;
+
+
+
+
+
+@media (max-width: 992px) {
+
+    /* Mobile mein dropdown menu ko hide rakhein, sirf click par mobile-show se open ho */
+    .dropdown-desktop-only .dropdown-menu {
+        display: none !important;
     }
-    .mobile-cta-li .btn-whatsapp {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin: 10px 0;
+
+    .has-dropdown:hover .dropdown-menu {
+        display: none !important;
+    }
+
+    /* Mobile menu me 'Courses' link ka style */
+    .nav-links.mobile-show li a {
+        /* Mobile menu ke links ke liye specific styling */
+        font-size: 1.2em;
+        color: #f0f0f0;
+        border-bottom: none;
+        /* Mobile menu links ka default border hatao */
+        padding: 10px 0;
+    }
+
+    .nav-links.mobile-show li a.active {
+        color: #00E676;
     }
 }

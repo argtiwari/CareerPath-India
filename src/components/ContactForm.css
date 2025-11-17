@@ -1,124 +1,159 @@
+/* src/components/ContactForm.css */
+
 .contact-form-section {
-    background-color: #f8f9fa;
+    background-color: #1a1a2e; /* Dark background */
     padding: 80px 0;
-}
-
-.form-container {
-    display: flex;
-    max-width: 1000px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.form-image-side {
-    flex: 1;
-    background-color: #f0f0f0;
-    background-image: radial-gradient(#ccc 1px, transparent 0);
-    background-size: 20px 20px;
     position: relative;
+}
+
+.form-container-wrapper {
     display: flex;
-    align-items: flex-end;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #213045; /* Slightly lighter inner background */
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     overflow: hidden;
-    min-height: 550px;
+    color: #f0f0f0;
 }
 
-.executive-image {
-    width: 100%;
+/* 1. Image Side Styling */
+.form-illustration-side {
+    flex: 1;
+    min-width: 350px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.counselling-illustration {
+    max-width: 100%;
     height: auto;
-    margin: -10px 0px 110px 0px;
-    object-fit: contain;
-    transform: translateY(10px);
+    display: block;
+    z-index: 2;
+    position: relative;
+    /* 🚨 Glow effect on the illustration itself */
+    filter: drop-shadow(0 0 15px rgba(0, 230, 118, 0.5)); 
 }
 
+/* 2. Form Content Side */
 .form-content-side {
-    flex: 1.2;
-    background-color: #ffffff;
+    flex: 1;
     padding: 40px;
-    text-align: center;
+    background-color: #28374a; /* Slightly different shade for contrast */
+}
+
+.form-main-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: #00E676; /* Green highlight */
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.title-icon {
+    font-size: 0.9em;
+    margin-right: 15px;
 }
 
 .form-subtitle {
-    color: #ff9800;
-    font-size: 0.85em;
-    font-weight: 600;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
-}
-
-.form-content-side h2 {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: #333;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.6);
     margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
 }
 
 .form-row {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
-.contact-form input,
-.contact-form textarea {
+/* 🚨 Minimalist Input Fields */
+.counselling-form input,
+.counselling-form select {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background-color: #33445c; /* Darker input background */
+    border: 1px solid #455a73; /* Subtle border */
+    border-radius: 8px;
+    color: #f0f0f0;
     font-size: 1em;
-    color: #555;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* For custom select styling */
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #007bff;
+.counselling-form input:focus,
+.counselling-form select:focus {
+    border-color: #00E676; /* Green focus border */
+    box-shadow: 0 0 8px rgba(0, 230, 118, 0.4); /* Green glow on focus */
 }
 
-.full-width-input {
-    width: 100%;
-    margin-bottom: 15px;
+.counselling-form select option {
+    background-color: #213045;
+    color: #f0f0f0;
 }
 
-.contact-form textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
+/* 🚨 Submit Button */
 .submit-btn {
     width: 100%;
-    background-color: #ff9800;
-    color: white;
+    background: linear-gradient(90deg, #00E676 0%, #28a745 100%);
+    color: #1a1a2e; /* Dark text on bright button */
     padding: 15px;
     font-size: 1.1em;
     font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 230, 118, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
 }
 
-.submit-btn:hover {
-    background-color: #e68900;
+.submit-btn:hover:not([disabled]) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 230, 118, 0.8);
 }
 
-@media (max-width: 800px) {
-    .form-container {
+.submit-btn[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-icon {
+    margin-right: 10px;
+}
+
+
+/* 📱 Mobile Responsive */
+@media (max-width: 992px) {
+    .form-container-wrapper {
         flex-direction: column;
-        box-shadow: none;
+        border-radius: 10px;
     }
-    .form-image-side {
-        display: none;
+    .form-illustration-side {
+        padding: 20px;
+        order: -1; /* Image first */
     }
     .form-content-side {
-        padding: 30px 20px;
+        padding: 30px 25px;
     }
-    .form-row {
-        flex-direction: column;
-        gap: 0;
+    .counselling-illustration {
+        max-height: 250px;
     }
-    .form-row input {
-        margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+    .form-main-title {
+        font-size: 1.5em;
+    }
+    .submit-btn {
+        font-size: 1em;
     }
 }

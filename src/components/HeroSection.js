@@ -67,7 +67,7 @@ function HeroSection() {
   return (
 
 
-    <section className="hero-section">
+    <section className="hero-section" id="home">
       <div className="gradient-bg"></div>
       <div className="container hero-content">
         <div className="main-headline-area">
