@@ -71,61 +71,61 @@ function Header() {
           <ul>
             <li><Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={handleLinkClick}>Home</Link></li>
             <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={handleLinkClick}>About Us</Link></li>
-            
+
 
             {/* 🚨 1. COURSES Dropdown (Mega Menu) */}
-          <li 
-                            className="has-dropdown dropdown-desktop-only"
-                            // 🚨 OnMouse events ab list item par nahi, inner div par lagenge ya pure CSS se handle honge.
-                            // Pichli baar humne pure CSS :hover par shift kar diya tha.
-                            // Agar aap JavaScript se control kar rahe the, toh yahan logic change hoga.
-                        >
-                            {/* 👇️ Ab Courses text ek Link hai */}
-                            <Link 
-                                to="/courses" // 🚨 Courses par click karne par is page par jayega
-                                className={location.pathname.startsWith('/courses') ? 'active' : ''} // Active state agar course detail page par bhi ho
-                                onClick={handleLinkClick}
-                            >
-                                Courses
-                            </Link>
+            <li
+              className="has-dropdown dropdown-desktop-only"
+            // 🚨 OnMouse events ab list item par nahi, inner div par lagenge ya pure CSS se handle honge.
+            // Pichli baar humne pure CSS :hover par shift kar diya tha.
+            // Agar aap JavaScript se control kar rahe the, toh yahan logic change hoga.
+            >
+              {/* 👇️ Ab Courses text ek Link hai */}
+              <Link
+                to="/courses" // 🚨 Courses par click karne par is page par jayega
+                className={location.pathname.startsWith('/courses') ? 'active' : ''} // Active state agar course detail page par bhi ho
+                onClick={handleLinkClick}
+              >
+                Courses
+              </Link>
 
-                            {/* Dropdown menu - yeh hover par hi dikhega (CSS se control) */}
-                            <div className="dropdown-menu courses-mega-menu">
-                                <div className="dropdown-grid">
-                                    {courseData.map((stream, index) => (
-                                        <div className="stream-column" key={index}>
-                                            <h4>{stream.title}</h4>
-                                            <ul>
-                                                {stream.courses.map((course, idx) => (
-                                                    <li key={idx}>
-                                                        <Link to={`/courses/${course.toLowerCase().replace(/\s/g, '-')}`} onClick={handleLinkClick}>
-                                                            {course}
-                                                        </Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </li>
+              {/* Dropdown menu - yeh hover par hi dikhega (CSS se control) */}
+              <div className="dropdown-menu courses-mega-menu">
+                <div className="dropdown-grid">
+                  {courseData.map((stream, index) => (
+                    <div className="stream-column" key={index}>
+                      <h4>{stream.title}</h4>
+                      <ul>
+                        {stream.courses.map((course, idx) => (
+                          <li key={idx}>
+                            <Link to={`/courses/${course.toLowerCase().replace(/\s/g, '-')}`} onClick={handleLinkClick}>
+                              {course}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </li>
 
             {/* 🚨 2. ADMISSIONS Dropdown (Simple List) */}
             <li>
-                            <Link 
-                                to="/services" 
-                                className={location.pathname === '/services' ? 'active' : ''} 
-                                onClick={handleLinkClick}
-                            >
-                                Our Services
-                            </Link>
-                        </li>
+              <Link
+                to="/services"
+                className={location.pathname === '/services' ? 'active' : ''}
+                onClick={handleLinkClick}
+              >
+                Our Services
+              </Link>
+            </li>
 
 
-            <li className="nav-item  nav-links ">
-              <Link 
-                to="/admission-predictor" 
-                className={location.pathname === '/admission-predictor' ? 'active-link' : ''} 
+            <li className="nav-item">
+              <Link
+                to="/admission-predictor"
+                className={location.pathname === '/admission-predictor' ? 'active-link' : ''}
                 onClick={handleLinkClick}
               >
                 Admission Predictor
