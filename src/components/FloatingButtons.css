@@ -20,10 +20,7 @@
 }
 @media (max-width: 480px) {
     .floating-buttons-container {
-        right: 10px; 
-        top: 60%;   
-    transform: translateY(-50%);
-    z-index: 0;
+        display: none;
     }
 }
 

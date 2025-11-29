@@ -1,5 +1,14 @@
 /* src/components/Header.css */
 
+
+.logo-image {
+    height: 60px;   
+    width: auto;    
+    max-width: 250px; 
+    object-fit: contain; 
+    transition: all 0.3s ease;
+}
+
 .navbar {
     position: fixed;
     /* Sticky se better hai, top: 0 par hamesha fixed rahega */
@@ -32,24 +41,7 @@
     padding: 0 20px;
 }
 
-/* Logo Styling */
-.logo a {
-    color: #00E676;
-    /* 🚨 Light Teal color for Logo (as per image) */
-    font-size: 1.6em;
-    font-weight: 700;
-    text-decoration: none;
-    display: flex;
-    /* For aligning logo image/text */
-    align-items: center;
-}
 
-/* Agar image logo hai */
-.logo-img {
-    height: 40px;
-    /* Adjust height */
-    margin-right: 10px;
-}
 
 /* Navigation Links */
 .nav-links ul {
@@ -140,12 +132,16 @@ nav-links li a,
         margin-left: auto;
         /* Button right mein rahega */
     }
-
-    .logo a {
-        font-size: 1.4em;
+    .logo-image {
+        height: 40px; 
+        max-width: 180px; 
     }
 
-    /* ... (Hamburger menu styles yahan add kar sakte hain) ... */
+    .logo a {
+        display: flex;
+        align-items: center;
+    }
+  
 }
 
 @media (max-width: 480px) {
@@ -188,15 +184,6 @@ nav-links li a,
     padding: 0 20px;
 }
 
-/* Logo Styling */
-.logo a {
-    color: #00E676;
-    font-size: 1.6em;
-    font-weight: 700;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
 
 /* -------------------------------------- */
 /* 💻 DESKTOP NAVIGATION & DROPDOWNS */

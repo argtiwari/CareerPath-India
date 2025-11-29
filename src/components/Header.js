@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
+import LogoImage from '../assets/logo.png';
 import './Header.css';
 
 // Courses/Streams ka data
@@ -53,7 +54,10 @@ function Header() {
 
         {/* Logo Section */}
         <div className="logo">
-          <Link to="/" onClick={handleLinkClick}>CareerPath India</Link>
+          <a href="/">
+            {/* ✅ className="logo-image" होना ज़रूरी है */}
+            <img src={LogoImage} alt="Career Counsel Pro" className="logo-image" />
+          </a>
         </div>
 
         {/* 🚨 Hamburger Menu Button (Mobile) */}

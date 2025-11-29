@@ -75,7 +75,7 @@ function HeroSection() {
             Choose The <span className="highlight-text">Right College</span>
           </h1>
           <p className="subtitle-text" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
-            Get expert counselling &amp; end-to-end support for admissions in India's top MBA, BBA &amp; Business Schools. Make the right career choice with confidence.
+            Get expert counselling &amp; end-to-end support for admissions in India's top colleges. Make the right career choice with confidence.
           </p>
 
 

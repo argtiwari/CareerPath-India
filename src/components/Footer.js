@@ -85,9 +85,7 @@ function Footer() {
             <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="social-icon instagram-bg" title="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
             <a href="https://linkedin.com/company/yourpage" target="_blank" rel="noopener noreferrer" className="social-icon linkedin-bg" title="LinkedIn"><FontAwesomeIcon icon={faLinkedinIn} /></a>
           </div>
-          <div className="developer-tag">
-            Developed by argCoding
-          </div>
+         
         </div>
 
       </div>
