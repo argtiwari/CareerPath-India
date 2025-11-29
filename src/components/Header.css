@@ -2,11 +2,17 @@
 
 
 .logo-image {
-    height: 60px;   
-    width: auto;    
-    max-width: 250px; 
-    object-fit: contain; 
-    transition: all 0.3s ease;
+    height: 55px;
+    width: auto;  
+    filter: invert(1) hue-rotate(153deg) saturate(3) brightness(1.2);  
+    /* filter: brightness(0) invert(1);      */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-image:hover {
+    transform: scale(1.05); 
+    opacity: 0.9;
 }
 
 .navbar {
@@ -438,5 +444,40 @@ nav-links li a,
 
     .nav-links.mobile-show li a.active {
         color: #00E676;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 1010;
+        
+        /* 🚨 FIX: Ye icon ko right side push kar dega */
+        margin-left: auto; 
+    }
+}
+
+/* src/components/Header.css */
+
+/* 📱 Mobile View Settings */
+@media (max-width: 992px) {
+
+    /* 1. Whatsapp बटन के पूरे डिब्बे (container) को गायब करें */
+    .nav-cta {
+        display: none !important; 
+    }
+
+    /* 2. अब Logo और Hamburger को कोनों (Ends) में धकेलें */
+    .navbar-content {
+        justify-content: space-between; /* Logo Left में, Hamburger Right में */
+        width: 100%;
+    }
+
+    /* 3. Hamburger को अपनी जगह पर सेट करें */
+    .hamburger {
+        display: block;
+        margin-left: auto; /* यह सुनिश्चित करेगा कि वो राइट साइड चिपका रहे */
     }
 }
