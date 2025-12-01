@@ -18,10 +18,12 @@ import StreamsSection from './components/StreamsSection';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import ContactSection from './components/ContactSection';
 import AdmissionPredictor from './components/AdmissionPredictor';
-
+import ScrollToTop from './components/ScrollToTop';
 import AdmissionsPage from './pages/AdmissionsPage';
 import CourseDetailPage from './pages/CourseDetailPage';
 import AllCoursesPage from './pages/AllCoursesPage';
+
+
 
 function App() {
     useEffect(() => {
@@ -34,22 +36,22 @@ function App() {
 
     return (
         <Router basename="/CareerPath-India"> 
+        <ScrollToTop />
             <div className="App">
-                <Header /> {/* 👈️ Header ko <Router> ke andar, <Routes> ke bahar rakhein */}
+                <Header /> 
 
-                {/* Main Content Area - Yahan specific pages ke components render honge */}
+                
                 <Routes>
-                    {/* Home Page Route - Saare sections ek hi page par hain */}
-                    <Route 
+                                    <Route 
                         path="/" 
                         element={
-                            <> {/* 👈️ Fragment use karein multiple components ke liye */}
+                            <> 
                                 <HeroSection />
                                 <ServicesSection />
                                 <WhyChooseUs />
                                 <Testimonials />
                                 <ContactSection />
-                                {/* <ContactForm /> */}
+                              
                             </>
                         } 
                     />

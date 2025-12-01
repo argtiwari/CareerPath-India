@@ -2,20 +2,19 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import allCoursesData from '../data/courseData';
-import './AllCoursesPage.css'; // Apni CSS file
+import './AllCoursesPage.css'; 
 
 function AllCoursesPage() {
     useEffect(() => {
-        window.scrollTo(0, 0); // Page load par top par scroll karein
+        window.scrollTo(0, 0); 
     }, []);
 
-    // allCoursesData ko streams ke hisaab se group kar sakte hain
     const groupedCourses = {};
     Object.values(allCoursesData).forEach(course => {
         const streamTitle = course.name.includes("Engineering") ? "Engineering" :
                             course.name.includes("Medical") ? "Medical" :
                             course.name.includes("MBA") ? "Management" :
-                            course.name.includes("Law") ? "Law" : "Other"; // Ya koi default
+                            course.name.includes("Law") ? "Law" : "Other";
         
         if (!groupedCourses[streamTitle]) {
             groupedCourses[streamTitle] = [];
@@ -39,11 +38,18 @@ function AllCoursesPage() {
                         <div className="course-cards-grid">
                             {groupedCourses[streamTitle].map((course, index) => (
                                 <Link 
-                                    to={`/courses/${course.name.toLowerCase().replace(/\s/g, '-').replace(/(\(|\))/g, '')}`} 
+                                    // 🚨 FIX: Using course.id for correct linking
+                                    to={`/courses/${course.id}`} 
                                     className="course-card" 
                                     key={index}
                                 >
-                                    <img src={course.img || 'https://via.placeholder.com/150?text=Course'} alt={course.name} className="course-card-img" />
+                                    {/* 🚨 FIX: Using PUBLIC_URL for images */}
+                                    <img 
+                                        src={process.env.PUBLIC_URL + course.img} 
+                                        onError={(e) => {e.target.onerror = null; e.target.src="https://via.placeholder.com/150?text=Course"}}
+                                        alt={course.name} 
+                                        className="course-card-img" 
+                                    />
                                     <h3>{course.name}</h3>
                                     <p className="card-fees">{course.avgFees}</p>
                                     <span className="card-view-details">View Details &#8594;</span>

@@ -12,7 +12,7 @@ const courseData = [
   { title: "Engineering (B.Tech)", courses: ["CSE", "ECE", "Mechanical", "Civil"] },
   { title: "Medical (MBBS/BDS)", courses: ["MBBS Abroad", "BAMS", "BDS", "Nursing"] },
   { title: "Management (MBA)", courses: ["HR", "Finance", "Marketing", "IT"] },
-  { title: "Law (LLB/BBA)", courses: ["BBA LLB", "Corporate Law", "Criminal Law"] },
+  { title: "Law (LLB/BBA)", courses: ["BBA", "Law", "Criminal Law"] },
 ];
 
 function Header() {

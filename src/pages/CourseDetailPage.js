@@ -2,16 +2,15 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import allCoursesData from '../data/courseData'; // Course data import karein
-import './CourseDetailPage.css'; // Apni CSS file
+import './CourseDetailPage.css';  
 
 function CourseDetailPage() {
-    const { courseName } = useParams(); // URL se courseName nikalenge (e.g., "cse", "mbbs-abroad")
-    const course = allCoursesData[courseName.toLowerCase()]; // Case-insensitive lookup
+    const { courseName } = useParams();  
+    const course = allCoursesData[courseName.toLowerCase()];  
 
     useEffect(() => {
-        // Page load par top par scroll karein
         window.scrollTo(0, 0);
-    }, [courseName]); // Jab courseName change ho toh scroll karein
+    }, [courseName]); 
 
     if (!course) {
         return (

@@ -77,11 +77,10 @@
 .course-card-img {
     width: 100px; /* Adjust size */
     height: 100px; /* Adjust size */
-    object-fit: contain;
+    object-fit: fill;
     margin-bottom: 20px;
     border-radius: 50%; /* Circular images */
     background-color: rgba(0, 230, 118, 0.1);
-    padding: 10px;
 }
 
 .course-card h3 {
