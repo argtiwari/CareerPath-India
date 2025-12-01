@@ -54,8 +54,7 @@ function Header() {
 
         {/* Logo Section */}
         <div className="logo">
-          <a href="/">
-            {/* ✅ className="logo-image" होना ज़रूरी है */}
+          <a href="#home">
             <img src={LogoImage} alt="Career Counsel Pro" className="logo-image" />
           </a>
         </div>
@@ -140,7 +139,7 @@ function Header() {
 
         {/* WhatsApp Button (Desktop) */}
         <div className="nav-cta">
-          <a href="https://wa.me/YOURPHONENUMBER" target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+          <a href="https://wa.me/917988770575" target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
             Whatsapp Us
           </a>
         </div>

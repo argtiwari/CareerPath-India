@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './HeroSection.css';
-
 import heroIllustration from '../assets/hero-illustration.png';
 
 const textsToType = [
@@ -81,8 +81,10 @@ function HeroSection() {
 
 
           <div className="hero-ctas" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-            <a href="#contact-info" className="primary-button">Book Free Call</a>
-            <a href="#streams" className="secondary-button">Explore Courses</a>
+            <a href="#schedule-call" className="primary-button">Book Free Call</a>
+            <Link to="/courses" className="secondary-button hero-btn-new">
+    Explore Courses
+</Link>
 
           </div>
 

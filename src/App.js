@@ -19,7 +19,6 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import ContactSection from './components/ContactSection';
 import AdmissionPredictor from './components/AdmissionPredictor';
 
-
 import AdmissionsPage from './pages/AdmissionsPage';
 import CourseDetailPage from './pages/CourseDetailPage';
 import AllCoursesPage from './pages/AllCoursesPage';
