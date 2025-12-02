@@ -27,12 +27,12 @@ function Footer() {
 
         {/* 1. About & Logo Column */}
         <div className="footer-col footer-about">
-          <h3>CareerPath India</h3>
+          <h3>CareerCounsel</h3>
           <p>
             Your trusted partner for direct admission and expert career counselling in India's top institutions.
           </p>
           <p className="copyright-text">
-            &copy; {new Date().getFullYear()} CareerPath India. All Rights Reserved.
+            &copy; {new Date().getFullYear()} CareerCounsel. All Rights Reserved.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ function Footer() {
           <h3>Contact Us</h3>
           <p><FontAwesomeIcon icon={faMapMarkerAlt} className="contact-icon" /> Office: Pune, India</p>
           <p><FontAwesomeIcon icon={faPhone} className="contact-icon" /> +91 7988770575</p>
-          <p><FontAwesomeIcon icon={faEnvelope} className="contact-icon" /> info@careerpath.com</p>
+          <p><FontAwesomeIcon icon={faEnvelope} className="contact-icon" /> info@CareerCounsel.com</p>
         </div>
 
         {/* 4. Social Media Column */}

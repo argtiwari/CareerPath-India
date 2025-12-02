@@ -60,7 +60,7 @@ function ServicesSection() {
         <div className="services-header" data-aos="fade-down" data-aos-duration="1000">
           <h2 className="section-title">Our Premier Admission Services</h2>
           <p className="section-subtitle">
-            At CareerPath India, we transform aspirations into reality. We offer **comprehensive, end-to-end guidance** for your admissions journey, simplifying complexities and maximizing your chances of securing a seat in your dream institution. Our services are crafted to empower you at every step.
+            At Career-Counsel, we transform aspirations into reality. We offer **comprehensive, end-to-end guidance** for your admissions journey, simplifying complexities and maximizing your chances of securing a seat in your dream institution. Our services are crafted to empower you at every step.
           </p>
         </div>
 

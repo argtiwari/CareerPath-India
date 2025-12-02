@@ -58,9 +58,9 @@ function WhyChooseUs() {
                 
                 {/* Section Header */}
                 <div className="wcu-header" data-aos="fade-down" data-aos-duration="1000">
-                    <h2 className="section-title">Why Choose CareerPath India?</h2>
+                    <h2 className="section-title">Why Choose Career-Counsel?</h2>
                     <p className="section-subtitle">
-                        Your future is too important to leave to chance. At CareerPath India, we combine **unwavering commitment, unparalleled expertise, and a student-first approach** to ensure your academic journey is a resounding success. Discover what sets us apart.
+                        Your future is too important to leave to chance. At Career-Counsel, we combine **unwavering commitment, unparalleled expertise, and a student-first approach** to ensure your academic journey is a resounding success. Discover what sets us apart.
                     </p>
                 </div>
 

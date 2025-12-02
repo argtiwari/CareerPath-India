@@ -8,21 +8,21 @@ import './Testimonials.css';
 const reviews = [
     {
         id: 1,
-        quote: "CareerPath India has been a game-changer! Their expert guidance helped me secure admission into my top-choice MBA college. Highly recommended!",
+        quote: "Career-Counsel has been a game-changer! Their expert guidance helped me secure admission into my top-choice MBA college. Highly recommended!",
         name: "Aman Sharma",
         course: "MBA Aspirant",
         rating: 5
     },
     {
         id: 2,
-        quote: "The admission process seemed overwhelming, but the team provided step-by-step support. I got direct admission in a great B.Tech institute. Thank you!",
+        quote: "Professional, ethical, and extremely helpful. My experience with them for medical admission was seamless and stress-free. Best consultancy in India.",
         name: "Priya Singh",
         course: "MBBS Student",
         rating: 5
     },
     {
         id: 3,
-        quote: "Professional, ethical, and extremely helpful. My experience with them for medical admission was seamless and stress-free. Best consultancy in India.",
+        quote: "The admission process seemed overwhelming, but the team provided step-by-step support. I got direct admission in a great B.Tech institute. Thank you!",
         name: "Anurag Tiwari",
         course: "B.Tech Student",
         rating: 5

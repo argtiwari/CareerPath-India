@@ -27,7 +27,7 @@ function TrustSection() {
             <div className="container">
                 <h2 className="section-title" data-aos="fade-down">Hamari Zimeedari: Aapki Safalta</h2>
                 <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    Why CareerPath India is the Right Step for Your Career Path.
+                    Why Career-Counsel is the Right Step for Your Career Path.
                 </p>
 
                 <div className="trust-grid">

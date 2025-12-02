@@ -1,0 +1,63 @@
+/* Container */
+.preloader-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #0d0d12; /* Deep Black/Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Stylish Text Animation */
+.brand-name {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #222; /* Text ka empty color (dark grey) */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Text ke upar color bharne ka effect */
+.brand-name::before {
+    content: attr(data-text); /* Use data-text attribute */
+    position: absolute;
+    top: 0; left: 0;
+    width: 0; /* Start width 0 */
+    height: 100%;
+    color: #00E676; /* Brand Green Color */
+    -webkit-text-stroke: 0px;
+    border-right: 2px solid #00E676; /* Cursor jaisa line */
+    overflow: hidden;
+    animation: fillText 2s linear forwards; /* Fill animation */
+}
+
+/* Progress Bar Line below text */
+.progress-bar {
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00E676, #007bff);
+    margin-top: 10px;
+    border-radius: 2px;
+    animation: fillBar 2s ease-in-out forwards;
+}
+
+/* Keyframes */
+@keyframes fillText {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes fillBar {
+    0% { width: 0; }
+    100% { width: 300px; } /* Jitna text chauda hai utna */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .brand-name { font-size: 2.5rem; }
+    @keyframes fillBar { 100% { width: 200px; } }
+}
