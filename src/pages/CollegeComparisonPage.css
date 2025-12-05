@@ -1,0 +1,203 @@
+/* src/pages/CollegeComparisonPage.css */
+
+.comparison-page-wrapper {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    background-color: #1a1a2e; /* Dark BG */
+    min-height: 100vh;
+    color: #f0f0f0;
+}
+
+.comparison-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.comparison-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.highlight-text {
+    color: #00E676;
+}
+
+/* Selection Area */
+.selection-area {
+    margin-bottom: 50px;
+}
+
+.selection-area h3 {
+    margin-bottom: 20px;
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+.college-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.selector-card {
+    background: #213045;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.selector-card:hover {
+    background: #2a3b55;
+}
+
+.selector-card.selected {
+    border-color: #00E676;
+    background: rgba(0, 230, 118, 0.1);
+}
+
+.selector-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.selector-info h4 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.add-btn {
+    background: #00E676;
+    border: none;
+    color: #1a1a2e;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background: #ff5f56;
+    border: none;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Comparison Table */
+.comparison-table-container {
+    overflow-x: auto; /* 🚨 CRITICAL FOR MOBILE: Enables Horizontal Scroll */
+    background: #213045;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.comparison-table {
+    width: 100%;
+    min-width: 600px; /* Ensures table doesn't squish on mobile */
+    border-collapse: collapse;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.comparison-table th {
+    background: #1a1a2e;
+    color: #00E676;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.feature-label {
+    text-align: left !important;
+    font-weight: bold;
+    color: #6dd5ed;
+    background: #1f2a40; /* Stick col 1 color if sticky needed */
+    width: 150px;
+}
+
+.th-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.th-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00E676;
+}
+
+.th-remove {
+    background: transparent;
+    border: 1px solid #ff5f56;
+    color: #ff5f56;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight-green {
+    color: #00E676;
+    font-weight: bold;
+}
+
+.highlight-blue {
+    color: #6dd5ed;
+    font-weight: bold;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 50px;
+    color: #555;
+    background: #213045;
+    border-radius: 15px;
+    border: 2px dashed #444;
+}
+
+.empty-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .comparison-header h1 {
+        font-size: 1.8rem;
+    }
+    .selector-card {
+        padding: 8px;
+    }
+    .selector-card img {
+        width: 40px;
+        height: 40px;
+    }
+    /* Table scroll is handled by overflow-x above */
+}

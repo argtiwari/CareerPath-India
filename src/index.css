@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* src/App.css */
+
+/* 1. Scrollbar Width */
+::-webkit-scrollbar {
+  width: 10px; /* Thoda mota taaki glow dikhe */
+}
+
+/* 2. Track */
+::-webkit-scrollbar-track {
+  background: #1a1a2e; 
+}
+
+/* 3. Thumb - Energy Tail Effect */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom, 
+    #00E676 0%,    /* Top: Bright Brand Green */
+    #6dd5ed 50%,   /* Middle: Cyan Blue */
+    rgba(109, 213, 237, 0) 100% /* Bottom: Invisible Fade */
+  );
+  
+  border-radius: 50px; /* Capsule shape */
+  border: 3px solid #1a1a2e; /* Track se match karta border taaki wo patla dikhe */
+}
+
+/* 4. Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom, 
+    #00ff88 0%, 
+    #00c6ff 60%, 
+    rgba(0, 198, 255, 0) 100%
+  );
+}

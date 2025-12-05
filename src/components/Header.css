@@ -8,6 +8,7 @@
     /* filter: brightness(0) invert(1);      */
     transition: transform 0.3s ease;
     cursor: pointer;
+    
 }
 
 .logo-image:hover {
@@ -16,25 +17,19 @@
 }
 
 .navbar {
-    position: fixed;
-    /* Sticky se better hai, top: 0 par hamesha fixed rahega */
+    position: sticky; 
     top: 0;
     width: 100%;
     z-index: 1000;
-    /* 🚨 Navbar Background: Dark Blue-Violet Gradient */
     background: linear-gradient(90deg, #1A1A2E 0%, #172D40 100%);
     padding: 15px 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    /* Thoda shadow */
     transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-/* Scroll hone par thoda change */
 .navbar.scrolled {
     padding: 10px 0;
-    /* Thoda chhota ho jaye */
     background-color: rgba(26, 26, 46, 0.95);
-    /* Thoda solid dark */
 }
 
 .navbar-content {

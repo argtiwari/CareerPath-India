@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import FloatingButtons from './components/FloatingButtons';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import NotificationBar from './components/NotificationBar';
 
 // Page Components
 import HeroSection from './components/HeroSection';
@@ -35,6 +36,9 @@ import NotFoundPage from './pages/NotFoundPage';
 // Pages (Already created)
 import AllCoursesPage from './pages/AllCoursesPage';
 import CourseDetailPage from './pages/CourseDetailPage';
+import ProcessSection from './components/ProcessSection';
+import CollegeComparisonPage from './pages/CollegeComparisonPage';
+import ROICalculatorPage from './pages/ROICalculatorPage';
 
 
 
@@ -73,9 +77,10 @@ function App() {
               <WhyChooseUs />
               <TrustSection />
               <StreamsSection />
+              <ProcessSection />
               <TopColleges />
               <Testimonials />
-              <ContactForm />
+              <ContactForm />            
             </>
           } />
 
@@ -113,6 +118,11 @@ function App() {
                <AdmissionPredictor />
              </>
           } />
+
+          <Route path="/college-comparison" element={<CollegeComparisonPage />} />
+          <Route path="/roi-calculator" element={<ROICalculatorPage />} />
+
+          {/* 404 NOT FOUND PAGE */}
           <Route path="*" element={<NotFoundPage />} />
 
         </Routes>
@@ -121,7 +131,8 @@ function App() {
         <ScrollToTopButton />
         <MobileStickyCTA />
         <Footer />
-      </div>
+        <NotificationBar />
+         </div>
     </Router>
   );
 }

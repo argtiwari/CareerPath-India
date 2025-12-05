@@ -123,17 +123,40 @@ function Header() {
                 Our Services
               </Link>
             </li>
-
-
-            <li className="nav-item">
-              <Link
-                to="/admission-predictor"
-                className={location.pathname === '/admission-predictor' ? 'active-link' : ''}
-                onClick={handleLinkClick}
-              >
-                Admission Predictor
-              </Link>
+            {/* 🚨 NEW: Tools Dropdown (Replace the old Admission Predictor link with this) */}
+<li className="has-dropdown dropdown-desktop-only">
+    <span className={location.pathname.includes('admission-predictor') || location.pathname.includes('college-comparison') || location.pathname.includes('roi-calculator') ? 'active' : ''}>
+        Tools 
+    </span>
+    
+    <div className="dropdown-menu simple-dropdown">
+        <ul>
+            {/* Tool 1: Predictor */}
+            <li>
+                <Link to="/admission-predictor" onClick={handleLinkClick}>
+                    Admission Predictor
+                </Link>
             </li>
+            
+            {/* Tool 2: Comparison */}
+            <li>
+                <Link to="/college-comparison" onClick={handleLinkClick}>
+                    College Comparison
+                </Link>
+            </li>
+            
+            {/* Tool 3: ROI Calculator */}
+            <li>
+                <Link to="/roi-calculator" onClick={handleLinkClick}>
+                    ROI Calculator
+                </Link>
+            </li>
+        </ul>
+    </div>
+</li>
+
+
+            
           </ul>
         </div>
 
